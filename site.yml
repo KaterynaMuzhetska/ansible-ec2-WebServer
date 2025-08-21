@@ -1,0 +1,5 @@
+- name: Basic server setup
+  hosts: webservers
+  become: true
+  roles:
+    - webserver

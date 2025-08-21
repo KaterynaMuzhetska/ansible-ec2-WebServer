@@ -1,0 +1,25 @@
+- name: Update packages (Ubuntu)
+  apt:
+    update_cache: true
+    upgrade: dist
+
+- name: Install essential tools
+  apt:
+    name: [git, curl, htop]
+    state: present
+
+- name: Create app user
+  user:
+    name: appuser
+    state: present
+
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: present
+
+- name: Start and enable Nginx
+  service:
+    name: nginx
+    state: started
+    enabled: true

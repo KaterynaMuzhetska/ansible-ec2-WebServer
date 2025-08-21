@@ -1,0 +1,14 @@
+# SSH keys
+*.pem
+*.key
+
+# Python / Ansible cache
+*.retry
+*.pyc
+__pycache__/
+
+# Vault password
+.vault_pass.txt
+
+# Logs
+*.log
